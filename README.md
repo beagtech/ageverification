@@ -65,3 +65,71 @@ Sample technical implementation (sample code to be provided soon):
 17.	The social site verifies signatures (the client’s and the site server’s) and issues the credential. 
 18.	After 10 minutes, everything is deleted from the third-party’s server as part of a periodic job.
 
+Flow Diagram:
+
+PHASE 1: SETUP & KEY GENERATION (Steps 1-7)
+--------------------------------------------------------------------------------
+[SOCIAL SITE]          [USER BROWSER]           [WHOS.IE SERVER]       [INSTITUTION]
+     |                        |                          |                    |
+     | 1. Detect Need         |                          |                    |
+     | 2. Gen "Social Code"   |                          |                    |
+     |                        |                          |                    |
+     +--(302 Redirect)------->|                          |                    |
+     |  (Code+Site+Type)      |                          |                    |
+     |                        | 5. Prompt for PIN        |                    |
+     |                        |    (Encrypt IndexedDB)   |                    |
+     |                        | 6. Gen 3 Key-Pairs       |                    |
+     |                        |    (Social, Inst, Srv)   |                    |
+     |                        |                          |                    |
+     |                        +--(7. PubKeys + Code)---->|                    |
+     |                        |    ***Signed (Key_Srv)***|                    |
+     |                        |                          | 7a. Create Doc     |
+     |                        |                          |    (PubKey_Inst)   |
+     |                        |                          | 7b. Gen 7-Letter   |
+     |                        |                          |    Code (Hash)     |
+     |                        |                          |                    |
+     |                        |<-(Code + Instructions)---+                    |
+     |                        |                          |                    |
+
+PHASE 2: THE BANK HANDSHAKE (Steps 8-11)
+--------------------------------------------------------------------------------
+     |                        |                          |                    |
+     |                        | 8. User Opens Bank       |                    |
+     |                        |    (New Tab/Window)      |                    |
+     |                        |    - Logs in             |                    |
+     |                        |    - Enters 7-Letter Code|                    |
+     |                        +--------(Code)----------->|                    |
+     |                        |                          | 9. Fetch Doc       |
+     |                        |                          |    (API Auth)      |
+     |                        |                          |    - Verify Hash   |
+     |                        |                          |                    |
+     |                        |                          | 10. Sign Attestation
+     |                        |                          |    "Owner of Key_I |
+     |                        |                          |     is 16+"        |
+     |                        |                          |                    |
+     |                        |                          +--(11. Signed Doc)->|
+     |                        |                             (Server-to-Server)|
+     |                        |                          |                    |
+
+PHASE 3: COMPLETION & REUSE (Steps 12-17)
+--------------------------------------------------------------------------------
+     |                        |                          |                    |
+     |                        | 12. Server Links & Swaps |                    |
+     |                        |     Doc for Final Token  |                    |
+     |                        |                          |                    |
+     |                        | 13. User Returns         |                    |
+     |                        |     (New Tab/Refresh)    |                    |
+     |                        |     (Unlock via PIN)     |                    |
+     |                        | 14. Sign with Key_Social |                    |
+     |                        |                          |                    |
+     |                        +--(15. Final JWT)-------->| (Optional: Cache)  |
+     |                        |     (Redirect)           |                    |
+     |<-(15. Pass JWT)--------+                          |                    |
+     |    (Query String)      |                          |                    |
+     | 16. Verify Signatures  |                          |                    |
+     |     (Client + Server)  |                          |                    |
+     |     GRANT ACCESS       |                          |                    |
+     |                        |                          |                    |
+     |                        |                          | 17. DELETE ALL     |
+     |                        |                          |     (10 Mins)      |
+     |                        |                          |                    |
