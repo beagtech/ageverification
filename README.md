@@ -32,7 +32,7 @@ Sample technical implementation (sample code to be provided soon):
 4.	Social site’s button launches the third-party website via a 302 redirect, passing the social code, the social site name, and the request type (e.g. age 16+). 
 5.	The person learns about the process. They learn that this site will receive no PII. Nonetheless, they will be asked to set an on-device password for the credentials that they are generating (browsers are often de facto multi-user).
    
-    a.	This password also allows us to store the ECDSA private keys, discussed next, using encryption in IndexedDB, so they can be used when the user switches tabs.
+    a.	This password also allows local storage of the ECDSA private keys, discussed next, using encryption in IndexedDB (i.e. locally, never leaving the browser), so they can be used when the user switches tabs.
   	
     b.	And the encryption via IndexedDB also allows support for “remember this credential” capabilities later.
   	
