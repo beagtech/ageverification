@@ -3,7 +3,12 @@ A Beag Tech mini white paper
 
 Many countries are finally coming to grips with how unhealthy social media is for young people. What we need most are social platforms that are healthy for everyone, including children. However, it is also true that children are especially vulnerable. The path of least resistance amongst governments seems to be to rely on big tech providers whose solutions involve collection of sensitive identity documents and biometrics. Other solutions involve input of highly sensitive information and sharing of images into opaque digital wallets, creating a new high-value security target on the device or via app-store hoaxes and phishing.
 
-Meanwhile we note that:
+Here are three alternative ways proposed to keep children safer online: 
+1. Grant government contracts to firms who then access sensitive information for all adults. This is madness but it seems to be the default plan due to lobbying power and dollars involved.
+2. Mandate that devices have a child/teen/adult flag (especially phones), e.g. configured by the account owner per mobile phone on a phone plan. Although this idea is not fleshed out below, it's another example of alternatives that should be discussed before more surveillance contracts are issued!
+3. Find ways to leverage *existing trusted relationships* in a simple workflow that results in a "yes/no" response to age verification (i.e. no new personal information is shared with anyone). This is discussed below. 
+
+We note that:
 
 1.	People already have trusted custodians of their identity and age information in the form of banks, health insurance firms, government agencies such as Revenue, mobile phone companies and utility providers or even county library systems. 
 2.	These existing institutions have websites with personal login requirements. In the case of banks, phone companies, and Revenue especially, an adult would be unlikely to share their login with minor children. 
