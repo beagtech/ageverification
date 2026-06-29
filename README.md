@@ -68,6 +68,7 @@ Sample technical implementation (sample code to be provided soon):
 Flow Diagram:
 
 PHASE 1: SETUP & KEY GENERATION (Steps 1-7)
+```
 --------------------------------------------------------------------------------
 [SOCIAL SITE]          [USER BROWSER]           [WHOS.IE SERVER]       [INSTITUTION]
      |                        |                          |                    |
@@ -90,8 +91,9 @@ PHASE 1: SETUP & KEY GENERATION (Steps 1-7)
      |                        |                          |                    |
      |                        |<-(Code + Instructions)---+                    |
      |                        |                          |                    |
-
+```
 PHASE 2: THE BANK HANDSHAKE (Steps 8-11)
+```
 --------------------------------------------------------------------------------
      |                        |                          |                    |
      |                        | 8. User Opens Bank       |                    |
@@ -110,8 +112,9 @@ PHASE 2: THE BANK HANDSHAKE (Steps 8-11)
      |                        |                          +--(11. Signed Doc)->|
      |                        |                             (Server-to-Server)|
      |                        |                          |                    |
-
+```
 PHASE 3: COMPLETION & REUSE (Steps 12-17)
+```
 --------------------------------------------------------------------------------
      |                        |                          |                    |
      |                        | 12. Server Links & Swaps |                    |
@@ -133,3 +136,4 @@ PHASE 3: COMPLETION & REUSE (Steps 12-17)
      |                        |                          | 17. DELETE ALL     |
      |                        |                          |     (10 Mins)      |
      |                        |                          |                    |
+```
