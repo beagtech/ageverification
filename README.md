@@ -26,9 +26,9 @@ Minimizing who knows what in this flow:
 2.	The institution receives only the code e.g. ghx-78rt (which the third-party website discards in a matter of minutes anyway). 
 3.	The social media app receives only a digitally-signed attestation of “of_age=yes” (issued by the third-party and tied to the original single-use code generated for the social account). 
 
-Revenue opportunity for banks and other institutions:
+Revenue opportunity for institutions:
 
-Perhaps the banks, phone companies, Revenue, and other institutions might charge the social media company for this service, perhaps at government-sanctioned rates that reflect historical harms caused by the social media firm to children, or paid out of a pool of fines levied to social media firms who have caused harm.
+Perhaps the banks, phone companies, county libraries, Revenue, and other institutions might charge the social media company for this service, perhaps at government-sanctioned rates that reflect historical harms caused by the social media firm to children, or paid out of a pool of fines levied to social media firms who have caused harm.
 
 Sample technical implementation (sample code to be provided soon):
 1.	Social site detects country of the logged-in user as requiring age verification.
