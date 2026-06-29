@@ -1,7 +1,7 @@
 # Zero-Surveillance Online Age Verification
 A Beag Tech mini white paper
 
-Many countries are finally coming to grips with how unhealthy social media is for young people. The path of least resistance seems to be to rely on big tech providers whose solutions involve collection of sensitive identity documents and biometrics. Other solutions involve input of highly sensitive information and sharing of images into opaque digital wallets, creating a new high-value security target on the device or via app-store hoaxes and phishing.
+Many countries are finally coming to grips with how unhealthy social media is for young people. What we need most are social platforms that are healthy for everyone, including children. However, it is also true that children are especially vulnerable. The path of least resistance amongst governments seems to be to rely on big tech providers whose solutions involve collection of sensitive identity documents and biometrics. Other solutions involve input of highly sensitive information and sharing of images into opaque digital wallets, creating a new high-value security target on the device or via app-store hoaxes and phishing.
 
 1.	People already have trusted custodians of their identity and age information in the form of banks, health insurance firms, government agencies such as Revenue, mobile phone companies and utility providers or even county library systems. 
 2.	These existing institutions have websites with personal login requirements. In the case of banks, phone companies, and Revenue especially, an adult would be unlikely to share their login with minor children. 
