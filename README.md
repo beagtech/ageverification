@@ -17,7 +17,7 @@ We note that:
 We therefore propose the following user experience. 
 1.	In the social media app, the person sees a prompt to “Click to verify age requirement using a privacy-preserving third-party website.” 
 2.	At the third-party website, the user is given a choice of participating institutions plus a 7-letter verification code e.g. ghx-78rt. 
-3.	The person logs in to their institution’s account, clicks the “verify age” banner, and inputs the code ghx-78rt. 
+3.	The person logs in to their institution’s account, clicks the “verify age” banner, and inputs the code ghx-78rt. (If county libraries are chosen as participating institutions, there's a societal side benefit of getting more people to connect with their libraries!)
 4.	Upon typing the code, a page is launched redirecting to the third-party website saying verification is complete and that it’ll redirect to the social site in 5 seconds. 
 5.	Optionally, the page could offer to save the “of age = yes” credential securely in their web browser’s cache for use with other social sites. Or click Continue to return to the social media app. 
 
@@ -77,7 +77,7 @@ Flow Diagram:
 PHASE 1: SETUP & KEY GENERATION (Steps 1-7)
 ```
 --------------------------------------------------------------------------------
-[SOCIAL SITE]          [USER BROWSER]           [WHOS.IE SERVER]       [INSTITUTION]
+[SOCIAL SITE]          [USER BROWSER]           [3rd party SERVER]       [INSTITUTION]
      |                        |                          |                    |
      | 1. Detect Need         |                          |                    |
      | 2. Gen "Social Code"   |                          |                    |
@@ -99,11 +99,11 @@ PHASE 1: SETUP & KEY GENERATION (Steps 1-7)
      |                        |<-(Code + Instructions)---+                    |
      |                        |                          |                    |
 ```
-PHASE 2: THE BANK HANDSHAKE (Steps 8-11)
+PHASE 2: THE INSTITUTION HANDSHAKE (Steps 8-11)
 ```
 --------------------------------------------------------------------------------
      |                        |                          |                    |
-     |                        | 8. User Opens Bank       |                    |
+     |                        | 8. User Opens eg. Bank   |                    |
      |                        |    (New Tab/Window)      |                    |
      |                        |    - Logs in             |                    |
      |                        |    - Enters 7-Letter Code|                    |
