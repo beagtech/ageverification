@@ -3,34 +3,34 @@ A Beag Tech mini white paper
 
 Many countries are finally coming to grips with how unhealthy social media is for young people. What we need most are social platforms that are healthy for everyone, including children. However, it is also true that children are especially vulnerable. The path of least resistance amongst governments seems to be to rely on big tech providers whose solutions involve collection of sensitive identity documents and biometrics. Other solutions involve input of highly sensitive information and sharing of images into opaque digital wallets, creating a new high-value security target on the device or via app-store hoaxes and phishing.
 
-Here are three alternative ways proposed to keep children safer online: 
+## Here are three alternative ways proposed to keep children safer online: 
 1. Grant government contracts to firms who then access sensitive information for all adults. This is madness but it seems to be the default plan due to lobbying power and dollars involved.
 2. Mandate that devices have a child/teen/adult flag (especially phones), e.g. configured by the account owner per mobile phone on a phone plan. Although this idea is not fleshed out below, it's another example of alternatives that should be discussed before more surveillance contracts are issued!
 3. Find ways to leverage *existing trusted relationships* in a simple workflow that results in a "yes/no" response to age verification (i.e. no new personal information is shared with anyone). This is discussed below. 
 
-We note that:
+## We note that:
 
 1.	People already have trusted custodians of their identity and age information in the form of banks, health insurance firms, government agencies such as Revenue, mobile phone companies and utility providers or even county library systems. 
 2.	These existing institutions have websites with personal login requirements. In the case of banks, phone companies, and Revenue especially, an adult would be unlikely to share their login with minor children. 
 3.	Answering the question “is this person of age” is a very different question (answered by “yes or no”) from “what is this person’s government ID number”; no one should need the answer to the latter. 
 
-We therefore propose the following user experience. 
+## We therefore propose the following user experience. 
 1.	In the social media app, the person sees a prompt to “Click to verify age requirement using a privacy-preserving third-party website.” 
 2.	At the third-party website, the user is given a choice of participating institutions plus a 7-letter verification code e.g. ghx-78rt. 
 3.	The person logs in to their institution’s account, clicks the “verify age” banner, and inputs the code ghx-78rt. (If county libraries are chosen as participating institutions, there's a societal side benefit of getting more people to connect with their libraries!)
 4.	Upon typing the code, a page is launched redirecting to the third-party website saying verification is complete and that it’ll redirect to the social site in 5 seconds. 
 5.	Optionally, the page could offer to save the “of age = yes” credential securely in their web browser’s cache for use with other social sites. Or click Continue to return to the social media app. 
 
-Minimizing who knows what in this flow:
+## Minimizing who knows what in this flow:
 1.	The third-party website receives only a single-use code from the social site to start the flow (as mentioned below). Then it only receives an “of age = yes” response from the institution. It never receives any PII. After 10 minutes, the server discards even this scant information that it received. 
 2.	The institution receives only the code e.g. ghx-78rt (which the third-party website discards in a matter of minutes anyway). 
 3.	The social media app receives only a digitally-signed attestation of “of_age=yes” (issued by the third-party and tied to the original single-use code generated for the social account). 
 
-Revenue opportunity for institutions:
+## Revenue opportunity for institutions:
 
 Perhaps the banks, phone companies, county libraries, Revenue, and other institutions might charge the social media company for this service, perhaps at government-sanctioned rates that reflect historical harms caused by the social media firm to children, or paid out of a pool of fines levied to social media firms who have caused harm.
 
-Sample technical implementation (sample code to be provided soon):
+## Technical Appendix (sample code to be provided soon):
 1.	Social site detects country of the logged-in user as requiring age verification.
 2.	Social site generates a single-use code (“social code”) and associates it with the user account. 
 3.	The person clicks the Verify Age button.
